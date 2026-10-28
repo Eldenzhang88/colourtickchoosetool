@@ -1,0 +1,94 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+<meta charset="utf-8"/>
+<meta name="viewport" content="width=device-width,initial-scale=1"/>
+<title>彩票选号助手 · HTML 预览（非微信运行时）</title>
+<style>
+:root{--c:#087f83;--bg:#f3f7f8;--card:#fff;--ink:#123b4a;--muted:#71858d;--danger:#ae422a}
+*{box-sizing:border-box}body{margin:0;font-family:-apple-system,BlinkMacSystemFont,"PingFang SC","Helvetica Neue",sans-serif;background:#dfe8ea;color:var(--ink)}
+.wrap{max-width:1100px;margin:24px auto;padding:0 16px}
+h1{font-size:20px;margin:0 0 8px} .note{color:var(--muted);font-size:13px;margin-bottom:20px}
+.grid{display:grid;grid-template-columns:repeat(auto-fit,minmax(280px,1fr));gap:16px}
+.phone{background:var(--bg);border-radius:24px;overflow:hidden;box-shadow:0 12px 40px rgba(18,59,74,.18);border:1px solid #c9d7db}
+.bar{background:#123b4a;color:#fff;padding:14px 16px;font-size:15px;font-weight:600}
+.content{padding:14px 14px 20px}
+.disclaimer{background:#fff7e8;color:#8a5a12;font-size:11px;padding:8px 10px;border-radius:8px;margin-bottom:10px}
+.card{background:var(--card);border-radius:14px;padding:12px;margin:10px 0;box-shadow:0 1px 0 rgba(0,0,0,.04)}
+.primary{display:block;width:100%;border:0;background:var(--c);color:#fff;border-radius:12px;padding:12px;font-size:14px;margin:8px 0}
+.secondary{display:block;width:100%;border:1px solid #b7cbd0;background:#fff;color:var(--ink);border-radius:12px;padding:10px;font-size:13px;margin:8px 0}
+.progress{height:8px;background:#d7e4e6;border-radius:99px;overflow:hidden}.fill{height:100%;width:42%;background:var(--c)}
+.balls{display:flex;flex-wrap:wrap;gap:6px}.ball{width:32px;height:32px;border-radius:50%;display:flex;align-items:center;justify-content:center;background:#e7f1f2;font-size:12px;font-weight:600}
+.ball.on{background:var(--c);color:#fff}
+.tabs{display:flex;background:#fff;border-top:1px solid #d7e4e6}.tabs span{flex:1;text-align:center;padding:10px;font-size:12px;color:var(--muted)}.tabs .on{color:var(--c);font-weight:600}
+.muted{color:var(--muted);font-size:12px}.title{font-size:18px;font-weight:700;margin:4px 0}.warn{color:var(--danger);font-size:12px}
+</style>
+</head>
+<body>
+<div class="wrap">
+  <h1>彩票选号助手 · 静态预览</h1>
+  <p class="note">本页仅作视觉示意，不能替代微信开发者工具。请用开发者工具导入源码目录 <code>/workspace/colourtickchoosetool</code>。筛号≠预测，中奖属偶然，禁止代售。</p>
+  <div class="grid">
+    <div class="phone">
+      <div class="bar">使用须知</div>
+      <div class="content">
+        <div class="disclaimer">未成年人勿用 · 理性购彩 · 勾选同意后进入</div>
+        <div class="card">
+          <div class="title">先了解，再使用</div>
+          <p class="muted">1. 筛号≠预测、中奖属偶然、不提升概率<br/>2. 禁止代售，不支付购票<br/>3. 购彩仅引导官方渠道</p>
+          <label class="muted"><input type="checkbox" checked disabled/> 我已年满18周岁并同意</label>
+          <button class="primary">同意并进入</button>
+        </div>
+      </div>
+    </div>
+    <div class="phone">
+      <div class="bar">选号 · 首页</div>
+      <div class="content">
+        <div class="disclaimer">筛号≠预测 · 中奖属偶然 · 不提升中奖概率</div>
+        <div class="title">把预算放在号码前面</div>
+        <button class="primary">快捷选号 · 生成候选号码</button>
+        <div class="card">
+          <div class="muted">本月预算 2026-10</div>
+          <div><strong>¥126</strong> <span class="muted">/ ¥300</span></div>
+          <div class="progress"><div class="fill"></div></div>
+          <div class="muted">预算剩余 ¥174 · 单期上限 ¥50</div>
+        </div>
+        <div class="card"><div class="muted">最近记录</div><div>选十 · 20261028 · ¥10</div></div>
+        <div class="tabs"><span class="on">选号</span><span>账本</span><span>我的</span></div>
+      </div>
+    </div>
+    <div class="phone">
+      <div class="bar">策略与生成</div>
+      <div class="content">
+        <div class="disclaimer">不提升概率 · 娱乐辅助筛号</div>
+        <div class="title">快乐8 · 选十</div>
+        <div class="card muted">冷热 / 遗漏 / 连号 / 分区 · 均可关闭</div>
+        <div class="card">
+          <div class="muted">候选 20 · 已选 10/10</div>
+          <div class="balls">
+            <div class="ball on">07</div><div class="ball on">29</div><div class="ball">31</div><div class="ball on">35</div>
+            <div class="ball on">37</div><div class="ball on">40</div><div class="ball">42</div><div class="ball on">43</div>
+            <div class="ball on">56</div><div class="ball on">58</div><div class="ball">61</div><div class="ball on">66</div>
+            <div class="ball on">72</div><div class="ball">75</div>
+          </div>
+          <button class="secondary">再来一组</button>
+          <button class="primary">定稿 · 去购彩指引</button>
+        </div>
+      </div>
+    </div>
+    <div class="phone">
+      <div class="bar">账本</div>
+      <div class="content">
+        <div class="disclaimer">手填记录 · 超预算强提示可继续但记日志</div>
+        <div class="card">
+          <div class="muted">本月汇总 ¥126 / ¥300</div>
+          <div class="warn">示例：若超限将二次确认并写本地日志</div>
+        </div>
+        <div class="card">选十 · 20261028 · ¥10</div>
+        <div class="tabs"><span>选号</span><span class="on">账本</span><span>我的</span></div>
+      </div>
+    </div>
+  </div>
+</div>
+</body>
+</html>

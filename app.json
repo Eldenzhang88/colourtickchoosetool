@@ -1,0 +1,45 @@
+{
+  "pages": [
+    "pages/notice/notice",
+    "pages/home/home",
+    "pages/generate/generate",
+    "pages/guide/guide",
+    "pages/ledger/ledger",
+    "pages/mine/mine"
+  ],
+  "window": {
+    "navigationBarTitleText": "彩票选号助手",
+    "navigationBarBackgroundColor": "#123b4a",
+    "navigationBarTextStyle": "white",
+    "backgroundColor": "#f3f7f8"
+  },
+  "tabBar": {
+    "color": "#71858d",
+    "selectedColor": "#087f83",
+    "list": [
+      {
+        "pagePath": "pages/home/home",
+        "text": "选号",
+        "iconPath": "assets/tab/home-normal.png",
+        "selectedIconPath": "assets/tab/home-active.png"
+      },
+      {
+        "pagePath": "pages/ledger/ledger",
+        "text": "账本",
+        "iconPath": "assets/tab/ledger-normal.png",
+        "selectedIconPath": "assets/tab/ledger-active.png"
+      },
+      {
+        "pagePath": "pages/mine/mine",
+        "text": "我的",
+        "iconPath": "assets/tab/mine-normal.png",
+        "selectedIconPath": "assets/tab/mine-active.png"
+      }
+    ]
+  },
+  "usingComponents": {
+    "disclaimer-bar": "/components/disclaimer-bar/disclaimer-bar"
+  },
+  "sitemapLocation": "sitemap.json",
+  "style": "v2"
+}
